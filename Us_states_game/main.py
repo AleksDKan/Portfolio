@@ -7,7 +7,6 @@ image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 
-
 data = pd.read_csv("50_states.csv")
 states_list = data["state"].tolist()
 
@@ -32,7 +31,6 @@ while game_is_on:
         states_to_learn = pd.DataFrame([x for x in states_list if x not in guessed_states])
         states_to_learn.to_csv("states_to_learn.csv")
         break
-
 
 screen.exitonclick()
 
